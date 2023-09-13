@@ -1,11 +1,10 @@
-<!-- src/routes/index.svelte -->
 <svelte:head>
  <title>Charlotte Philibert</title>
 </svelte:head>
 
 <script>
-  import { projects } from './projects/projects';
-import Projects from './projects/projects.svelte';
+  import Projects from './projects/projects.svelte';
+  import { base } from '$app/paths';
 </script>
 
 <div class="container">
@@ -24,7 +23,7 @@ import Projects from './projects/projects.svelte';
           I am actively looking for a 6-month end-of-studies internship in the field of image synthesis, starting in February 2024.
         </h2>
         <div style="color:black" class="scroll-button animate-scroll" tabindex="0">
-          <a href="/about">Click Here</a><div class="arrow">→</div>
+          <a href="{base}/about">Click Here</a><div class="arrow">→</div>
         </div>
         <div class="title-project">
           <h11>My Projects</h11>
@@ -34,13 +33,19 @@ import Projects from './projects/projects.svelte';
   </div>
  </div>
 
-
+ <!--<div class="background-div"></div>-->
 
  <Projects/>
  
- <div class="background-div"></div>
+
 
  <style>
+
+  :global(body)
+    {
+      background: linear-gradient(130deg, rgb(255, 255, 110), rgb(245, 116, 245));
+    }
+  
   .info {
       text-align: center;
       position: relative;
@@ -56,7 +61,7 @@ import Projects from './projects/projects.svelte';
   }
 
   .container {
-  max-width: 1400px;
+      max-width: 1400px;
       margin: 190px 0 0 2.5rem;
   }
 
@@ -69,7 +74,7 @@ import Projects from './projects/projects.svelte';
       position: relative;
       font: inherit;
       margin: 0;
-  text-align: left;
+      text-align: left;
       line-height: 130%;
       width: fit-content;
       font-weight: 800;
@@ -104,27 +109,27 @@ import Projects from './projects/projects.svelte';
   }
 
   
-
+/*
 .background-div {
   background-color: var(--background);
-    width: 100%;
+  width: 100%;
   height: 56vh;
   margin: -155px auto;
-}
+}*/
  
 
   .info .info-text {
       position: relative;
   }
 
-.scroll-button {
-  display: flex;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
+  .scroll-button {
+    display: flex;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
 
   .scroll-button .arrow {
     margin-left: 0.50rem;
-}
+  }
 </style>

@@ -26,8 +26,10 @@
 </div>
 
 <style>
+
    .main_container {
        margin: 0 80px 0 65px;
+       max-width: 1400px;
    }
 
    .about-title {

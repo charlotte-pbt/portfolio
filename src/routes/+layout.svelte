@@ -1,24 +1,27 @@
-<!-- src/routes/__layout.svelte -->
+<!-- src/routes/+layout.svelte -->
+<script>
+    import { base } from '$app/paths';
+</script>
 
 <nav>
     <div class="nav-container">
-        <a href="/" class="nav-logo" title="Back to Homepage">Charlotte Philibert</a>
+        <a href="{base}/" class="nav-logo" title="Back to Homepage">Charlotte Philibert</a>
         <div class="nav-links">
-            <a href="/about" class="link">About</a>
-            <a href="/projects" class="link">Projects</a>
-            <a href="/contact" class="link">Contact</a>
+            <a href="{base}/about" class="link">About</a>
+            <a href="{base}/projects" class="link">Projects</a>
         </div>
     </div>
  </nav>
  
- <div class="container">
-  <!-- Pages will be injected below -->
-     <slot></slot>
- </div>
+<div class="container">
+<!-- Pages will be injected below -->
+    <slot></slot>
+</div>
  
  <style>
      .container {
         max-width: 1400px;
         margin: 50px auto;
+        background-size: cover;
     }
  </style>

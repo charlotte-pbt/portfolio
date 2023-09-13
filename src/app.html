@@ -16,6 +16,7 @@
 	background-position: left top;
 	font-family: "Inter", sans-serif;
 	margin: 0;
+	background-size: cover;
 	background-repeat: no-repeat;
 	}
  
@@ -39,15 +40,21 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		margin: 0 80px 0 80px;
-		padding-top: 2rem;
-		padding-bottom: 2rem;
+		margin: 0 0px 0 0px;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+
+		background: linear-gradient(160deg, rgba(255, 255, 110, 0.55), rgba(240, 119, 212, 0.55));
+		background-color: white;
+		z-index: 1000; /* Pour s'assurer qu'il est au-dessus des autres éléments */
 	}
  
 	nav .nav-container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		margin: 0 80px 0 80px;
 	}
  
 	.nav-links {

@@ -41,10 +41,6 @@
 
  <style>
 
-  :global(body)
-    {
-      background: linear-gradient(130deg, rgb(255, 255, 110), rgb(245, 116, 245));
-    }
   
   .info {
       text-align: center;

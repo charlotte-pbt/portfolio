@@ -1,6 +1,5 @@
 <script>
     import { projects } from './projects.js';
-    import { onMount } from 'svelte';
     import { base } from '$app/paths';
 
 
@@ -21,16 +20,20 @@
 
 <div class="container">
     <div class="projects">
-        {#each projects as project, i}
-            <div class="post">
-                <h2>{project.title}</h2>
-                <p>{getsubString(project.description, 60)}</p>
-                <p class="readmore">
-                    <a href="{base}/projects" class="link" on:click={() => project.visible=true} style="color: rgb(10, 10, 139);">
-                        Read More
-                    </a>
-                </p>
-            </div>
+        {#each Array(projects.length) as _, i}
+          {#if i % 2 === 0}
+              <div class="row">
+                  {#each Array(2) as _, j}
+                      <div class="post">
+                          <h2>{projects[i+j].title}</h2>
+                          <p>{getsubString(projects[i+j].description, 60)}</p>
+                            <a class="readmore" href="{base}/projects" on:click={() => projects[i+j].visible=true}>
+                                   Read More
+                            </a>
+                      </div>
+                  {/each}
+              </div>
+            {/if}
         {/each}
     </div>
  </div>
@@ -38,37 +41,43 @@
 
  <style>
     .container {
-        max-width: 1100px;
-        margin: 50px auto;
-        background-color: transparent;
-       
-    }
-    .projects {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 70px;
-        margin: 0 auto;
+        max-width: 1400px;
+        height: 100%;  
     }
 
-    .post {
-        border: 1px solid #ddd;
-        background-color: rgba(255, 255, 255, 0.2);
-        padding: 10px;
-        box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
-        transition: all 0.3s;
-    }
+    .projects {
+      margin: 0 auto;
+  }
+
+  .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 5%;
+      margin: 5% auto;
+  }
+
+  .post {
+      border: 1px solid #ddd;
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 10px;
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+      transition: all 0.3s;
+      
+  }
 
     h2 {
         margin: 0;
     }
 
     .readmore {
-        color: rgb(10, 10, 139);
-        text-align: right;
+        display: flex;
+        color: black;
         margin: 20px 0 0 0;
+        float: right;
     }
 
     .readmore:hover {
-        color: green;
+        color: #ff6a00;  
+        cursor: pointer;
     }
 </style>

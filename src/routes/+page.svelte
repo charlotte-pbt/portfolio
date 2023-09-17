@@ -8,64 +8,47 @@
 </script>
 
 <div class="container">
-  <div class="info">
-    <div class="animate-background">
-      <div class="container info-container">
-        <div class="info-text">
-          <h1>
-            <p class="animate-text-1">Computer engineering student,</p>
-          </h1>
-          <h11>
-            <p class="text-2">EPITA, IMAGE major, specialized in images synthesis</p>
-          </h11>
-        </div>
-        <h2 class="subtitle">
-          I am actively looking for a 6-month end-of-studies internship in the field of image synthesis, starting in February 2024.
-        </h2>
-        <div style="color:black" class="scroll-button animate-scroll" tabindex="0">
-          <a href="{base}/about">Click Here</a><div class="arrow">→</div>
-        </div>
-        <div class="title-project">
-          <h11>My Projects</h11>
-        </div>
-      </div>
-    </div>
-  </div>
+          <div class="info-text">
+              <h1>
+                <p class="animate-text-1">Computer engineering student,</p>
+              </h1>
+              <h11>
+                <p class="text-2">EPITA, IMAGE major, specialized in images synthesis</p>
+              </h11>
+          </div>
+
+          <h2 class="subtitle">
+            I am actively looking for a 6-month end-of-studies internship in the field of image synthesis, starting in February 2024.
+          </h2>
+
+          <div role="link" style="color:black" class="scroll-button animate-scroll" tabindex="0">
+            <a href="{base}/about">Click Here</a><div class="arrow">→</div>
+          </div>
+
+          <div class="title-project">
+            <h11>My Projects</h11>
+          </div>
+
+          <Projects_preview/>
+         
  </div>
 
 
- <Projects_preview/>
- 
-
 
  <style>
-
   
-  .info {
-      text-align: center;
-      position: relative;
-  }       
-
-  .info-container {
-      height: 100%;
-      display:flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: left;
-      align-items: start;
-  }
 
   .container {
       max-width: 1400px;
-      margin: 190px 0 0 2.5rem;
+      margin: 190px 65px 0 65px;
   }
 
-  .info h1 {
+  h1 {
       font-size: 4rem;
       margin: 0;
   }
 
-  .info h1 p {
+  h1 p {
       position: relative;
       font: inherit;
       margin: 0;
@@ -76,12 +59,12 @@
       letter-spacing: -0.03em;
   }
 
-  .info h11 {
+  h11 {
       font-size: 2rem;
       margin: 0;
   }
 
-  .info h11 p {
+  h11 p {
       position: relative;
       font: inherit;
       margin: 0;
@@ -97,14 +80,14 @@
       margin-top: 200px;
   }
 
-  .info h2 {
+  h2 {
       max-width: 65ch;
       font-weight: 200;
       margin-top: 0.50rem;
   }
  
 
-  .info .info-text {
+  .info-text {
       position: relative;
   }
 

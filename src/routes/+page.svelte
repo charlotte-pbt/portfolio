@@ -33,7 +33,6 @@
   </div>
  </div>
 
- <!--<div class="background-div"></div>-->
 
  <Projects/>
  
@@ -103,15 +102,6 @@
       font-weight: 200;
       margin-top: 0.50rem;
   }
-
-  
-/*
-.background-div {
-  background-color: var(--background);
-  width: 100%;
-  height: 56vh;
-  margin: -155px auto;
-}*/
  
 
   .info .info-text {

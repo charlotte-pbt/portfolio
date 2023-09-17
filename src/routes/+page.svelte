@@ -3,7 +3,7 @@
 </svelte:head>
 
 <script>
-  import Projects from './projects/projects.svelte';
+  import Projects_preview from './projects/projects_preview.svelte';
   import { base } from '$app/paths';
 </script>
 
@@ -34,7 +34,7 @@
  </div>
 
 
- <Projects/>
+ <Projects_preview/>
  
 
 

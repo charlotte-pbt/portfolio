@@ -1,7 +1,7 @@
 export let projects = [
     {
         title: "Catmull–Clark subdivision surface",
-        year: '3',
+        year: "3rd year at Epita",
         description: "Recursive implementation of Catmull–Clark subdivision surface for image synthesis project.",
         languages: ["C++", "OpenGL"],
         visible: false,
@@ -9,7 +9,7 @@ export let projects = [
     },
     {
         title: "My Tiny Town",
-        year: '3',
+        year: "3rd year at Epita",
         description: "Design software for building your own city.",
         languages: ["OpenGL"],
         visible: false,
@@ -25,7 +25,7 @@ export let projects = [
     },
     {
         title: "Video game",
-        year: '1',
+        year: "1st year at Epita",
         description: "Multiplayer hide-and-seek video game on Unity",
         languages: ["C#", "Unity"],
         visible: false,

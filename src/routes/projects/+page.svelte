@@ -7,6 +7,7 @@
   import { projects } from './projects.js';
   import { onMount } from 'svelte';
   import { onDestroy } from 'svelte';
+  import Carousel from 'svelte-carousel';
 
   let projectsData = [];
 
@@ -28,8 +29,7 @@
       });
       project.visible = !project.visible;
       projectsData = [...projectsData];
-}
-
+    }
 </script>
 
 
@@ -44,7 +44,7 @@
                           <h2>{projectsData[i+j].title}</h2>
                           <p style="color: #ff6a00;">{projectsData[i+j].languages}</p>
                           <p >{projectsData[i+j].year}</p>
-                              <button class="readmore" on:click={() => toggleExpand(projectsData[i+j])}>
+                              <button style="font-size: 0.9em;" class="readmore" on:click={() => toggleExpand(projectsData[i+j])}>
                                   {#if projectsData[i+j].visible}
                                       Read Less <div class="arrow">↑</div>
                                   {:else}
@@ -54,19 +54,55 @@
                       </div>
                   {/each}
               </div>
-              {#if projectsData[i].visible}
-                  <div class="post-infos">
-                      <h2>{projectsData[i].title}</h2>
-                      <p>{projectsData[i].description}</p>
-                  </div>
-
-              {:else if projectsData[i+1].visible}
-                  <div class="post-infos">
-                      <h2>{projectsData[i+1].title}</h2>
-                      <p>{projectsData[i+1].description}</p>
-                  </div>
-              {/if}
           {/if}
+          {#if projectsData[i].visible}
+                <div class="infos">
+                    <div class="post-infos">
+                        <h2>{projectsData[i].title}</h2>
+
+                        {#if projectsData[i].github}
+                            <p style="padding-top: 10px;">
+                                Github : <a href={projectsData[i].github} class="github">
+                                            {projectsData[i].github}
+                                        </a>
+                            </p>
+                        {/if}
+
+                        <p style="padding-top: 30px;">{@html projectsData[i].infos.replace(/\n/g, '<br>')}</p> 
+                        <br>
+                        {#if projectsData[i].people}
+                            <p>Number of people involved : {projectsData[i].people}</p>
+                        {/if}
+                        {#if projectsData[i].context}
+                            <p>Context : {projectsData[i].context}</p>
+                        {/if}
+                        {#if projectsData[i].crossplatform}
+                            <p>Crossplatform : {projectsData[i].crossplatform}</p>
+                        {/if}
+                        {#if projectsData[i].languages}
+                            <p>Languages : {projectsData[i].languages}</p>
+                        {/if}
+                        {#if projectsData[i].dependencies}
+                            <p>Dependencies : {projectsData[i].dependencies}</p>
+                        {/if}
+                    </div>
+
+                    {#if projectsData[i].images}
+                        <div class="carousel">
+                            <Carousel let:loaded>
+                                    {#each projectsData[i].images as image}
+                                    
+                                        <img
+                                            src={image.path}
+                                            alt={image.alt}
+                                            loading="lazy"
+                                        />
+                                    {/each}
+                            </Carousel>
+                        </div>
+                    {/if}
+                </div>
+              {/if}
       {/each}
 
   </div>
@@ -107,7 +143,24 @@
   }
 
   .post-infos {
-      padding: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+
+  .carousel {
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0 auto;
+  }
+
+  .github {
+      color: #ff6a00;
+  }
+
+  .github:hover {
+      color: #ff6a00;
+      text-decoration: underline;
   }
 
   h2 {

@@ -74,6 +74,7 @@
         color: black;
         margin: 20px 0 0 0;
         float: right;
+        font-size: 0.9em;
     }
 
     .readmore:hover {

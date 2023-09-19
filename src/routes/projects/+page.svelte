@@ -35,9 +35,11 @@
 <head>
     <!--Preload of images to prevent blinking-->
     {#each projectsData as project}
-        {#each project.images as image}
-            <link rel="preload" href={image.path} as="image">
-        {/each}
+        {#if project.images}
+            {#each project.images as image}
+                    <link rel="preload" href={image.path} as="image">
+            {/each}
+        {/if}
     {/each}
 </head>
 
@@ -160,7 +162,7 @@
   }
 
   .carousel {
-    padding-top: 50px;
+    padding-top: 35px;
     padding-left: 40px;
     padding-right: 40px;
     margin: 0 auto;
@@ -168,7 +170,7 @@
   }
 
   .image {
-    max-height: 800px; 
+    max-height: 800px;
     width: auto;
   } 
 

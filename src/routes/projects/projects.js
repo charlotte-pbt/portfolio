@@ -1,4 +1,7 @@
 export let projects = [
+
+    /* Catmull–Clark subdivision surface */
+
     {
         title: "Catmull–Clark subdivision surface",
         year: "3rd year at Epita",
@@ -33,6 +36,10 @@ export let projects = [
             }
         ],
     },
+
+
+    /* My Tiny Town */
+
     {
         title: "My Tiny Town",
         year: "3rd year at Epita",
@@ -53,16 +60,39 @@ export let projects = [
         ],
         github: "https://github.com/downvoteed/my-tiny-town",
     },
+
+
+    /* Ball game */
+
     {
         title: "Casual mobile game",
         year: "Personnal project",
+        people: "1",
         context: "Personnal project",
         description: "Game prototype (3 levels) made on Unity in 5 days",
-        infos: "need",
+        infos: "This is a casual mobile game made on Unity in 5 days for an internship test.",
         languages: ["C#", " Unity"],
+        platforms: ["Android"],
+        levels: ["3"],
         visible: false,
-        images: []
+        images: [
+            {
+                path: "https://i.imgur.com/totnVZM.png",
+                alt: "Ball Game 1",
+                id: "ball_game1",
+            },
+            {
+                path: "https://i.imgur.com/2dclygt.png",
+                alt: "Ball Game 2",
+                id: "ball_game2",
+            }
+        ],
+        github: "https://github.com/charlotte-pbt/Ball-Game",
     },
+
+
+    /* Video game S2 */
+
     {
         title: "Video game",
         year: "1st year at Epita",
@@ -72,6 +102,5 @@ export let projects = [
         infos: "need",
         languages: ["C#", " Unity"],
         visible: false,
-        images: []
     },
 ]

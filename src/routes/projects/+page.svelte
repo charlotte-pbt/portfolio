@@ -88,6 +88,12 @@
                         {#if projectsData[i].crossplatform}
                             <p>Crossplatform : {projectsData[i].crossplatform}</p>
                         {/if}
+                        {#if projectsData[i].platforms}
+                            <p>Platform : {projectsData[i].platforms}</p>
+                        {/if}
+                        {#if projectsData[i].levels}
+                            <p>Levels number : {projectsData[i].levels}</p>
+                        {/if}
                         {#if projectsData[i].languages}
                             <p>Languages : {projectsData[i].languages}</p>
                         {/if}
@@ -98,9 +104,11 @@
 
                     {#if projectsData[i].images}
                         <div class="carousel">
-                            <Carousel>
+                            <Carousel >
                                     {#each projectsData[i].images as image}
-                                        <img src={image.path} alt={image.alt} id={image.id}/>
+                                    <div style="display: flex; justify-content: center; align-items: center;">
+                                        <img class="image" src={image.path} alt={image.alt} id={image.id}/>
+                                    </div>
                                     {/each}
                             </Carousel>
                         </div>
@@ -156,7 +164,13 @@
     padding-left: 40px;
     padding-right: 40px;
     margin: 0 auto;
+    height: auto;
   }
+
+  .image {
+    max-height: 800px; 
+    width: auto;
+  } 
 
   .github {
       color: #ff6a00;

@@ -12,24 +12,24 @@ export let projects = [
         visible: false,
         images: [
             {
-                path: "./src/images/catmull-clark1.png",
+                path: "https://i.imgur.com/8jtD9VD.png",
                 alt: "Catmull-Clark 0 subdivision",
                 id: "catmullclark1",
             },
             {
-                path: "./src/images/catmull-clark4.png",
+                path: "https://i.imgur.com/0VOPMDj.png",
                 alt: "Catmull-Clark 2 subdivision",
-                id: "catmullclark2",
+                id: "catmullclark4",
             },
             {
-                path: "./src/images/catmull-clark3.png",
+                path: "https://i.imgur.com/piaU5Td.png",
                 alt: "Catmull-Clark 4 subdivision",
                 id: "catmullclark3",
             },
             {
-                path: "./src/images/catmull-clark2.png",
+                path: "https://i.imgur.com/3TXRJSf.png",
                 alt: "Catmull-Clark sword 1 subdivision",
-                id: "catmullclark4",
+                id: "catmullclark2",
             }
         ],
     },
@@ -46,7 +46,7 @@ export let projects = [
         visible: false,
         images: [
             {
-                path: "./src/images/mytinytown.png",
+                path: "https://i.imgur.com/khi9TCt.png",
                 alt: "My Tiny Town",
                 id: "myTinyTown",
             }

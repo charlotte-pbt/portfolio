@@ -32,6 +32,15 @@
     }
 </script>
 
+<head>
+    <!--Preload of images to prevent blinking-->
+    {#each projectsData as project}
+        {#each project.images as image}
+            <link rel="preload" href={image.path} as="image">
+        {/each}
+    {/each}
+</head>
+
 
 <div class="container">
   <h1>My Projects</h1>
@@ -89,14 +98,9 @@
 
                     {#if projectsData[i].images}
                         <div class="carousel">
-                            <Carousel let:loaded>
+                            <Carousel>
                                     {#each projectsData[i].images as image}
-                                    
-                                        <img
-                                            src={image.path}
-                                            alt={image.alt}
-                                            loading="lazy"
-                                        />
+                                        <img src={image.path} alt={image.alt} id={image.id}/>
                                     {/each}
                             </Carousel>
                         </div>

@@ -171,6 +171,7 @@
 
   .image {
     max-height: 800px;
+    max-width: 1100px;
     width: auto;
   } 
 

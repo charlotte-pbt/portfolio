@@ -51,33 +51,36 @@
           {#if i % 2 === 0}
               <div class="row">
                   {#each Array(2) as _, j}
-                      <div class="post {projectsData[i+j].visible ? 'expanded' : ''}">
-                          <h2>{projectsData[i+j].title}</h2>
-                          <p style="color: #ff6a00;">{projectsData[i+j].languages}</p>
+                      <button class="post {projectsData[i+j].visible ? 'expanded' : ''}" on:click={() => toggleExpand(projectsData[i+j])}>
+                        <div class="post-text">
+                          <h2 >{projectsData[i+j].title}</h2>
+                          <p style="color: #ff6a00; ">{projectsData[i+j].languages}</p>
                           <p >{projectsData[i+j].year}</p>
-                              <button style="font-size: 0.9em;" class="readmore" on:click={() => toggleExpand(projectsData[i+j])}>
-                                  {#if projectsData[i+j].visible}
-                                      Read Less <div class="arrow">↑</div>
-                                  {:else}
-                                      Read More <div class="arrow">↓</div>
-                                  {/if}
-                              </button>
-                      </div>
+                        </div>
+                        <p style="font-size: 0.9em;" class="readmore">
+                            {#if projectsData[i+j].visible}
+                                Read Less <div class="arrow">↑</div>
+                            {:else}
+                                Read More <div class="arrow">↓</div>
+                            {/if}
+                        </p>
+                      </button>
                   {/each}
               </div>
           {/if}
           {#if projectsData[i].visible}
                 <div class="infos">
                     <div class="post-infos">
-                        <h2>{projectsData[i].title}</h2>
-
-                        {#if projectsData[i].github}
-                            <p style="padding-top: 10px;">
-                                Github : <a href={projectsData[i].github} class="github">
-                                            {projectsData[i].github}
-                                        </a>
-                            </p>
-                        {/if}
+                        
+                        <div style="display: flex; align-items: center;">
+                            <h2 style="margin: 0;">{projectsData[i].title}</h2>
+                            {#if projectsData[i].github}
+                                <a href={projectsData[i].github} class="GitHub" style="width: 5%;" >
+                                        <img src="https://i.imgur.com/DhT6us5.png" alt="GitHub" style="width: 100%; padding-top :5%"/>
+                                </a>
+                            {/if}
+                        </div>
+                        
 
                         <p style="padding-top: 30px;">{@html projectsData[i].infos.replace(/\n/g, '<br>')}</p> 
                         <br>
@@ -108,9 +111,9 @@
                         <div class="carousel">
                             <Carousel >
                                     {#each projectsData[i].images as image}
-                                    <div style="display: flex; justify-content: center; align-items: center;">
-                                        <img class="image" src={image.path} alt={image.alt} id={image.id}/>
-                                    </div>
+                                        <div style="max-width: 1100px;">
+                                            <img class="image" src={image.path} alt={image.alt} id={image.id}/>
+                                        </div>
                                     {/each}
                             </Carousel>
                         </div>
@@ -148,12 +151,50 @@
       padding: 10px;
       box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
       transition: all 0.3s;
+      text-align: left;
+      vertical-align: top;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      text-align: left;
+      vertical-align: top;
+      position: relative;
       
   }
+
+  .post:hover {
+      cursor: pointer;
+      border: 1px solid #ff6a00;
+      box-shadow: 0 0 10px #ff6a00;
+  }
+
+  .post:hover .readmore {
+    color: #ff6a00;
+}
 
   .post.expanded {
     border: 1px solid #ff6a00;
     box-shadow: 0 0 10px #ff6a00;
+  }
+
+  .post-text {
+    flex-grow: 1;
+  }
+
+  .readmore {
+      display: flex;
+      color: black;
+      margin: 20px 0 0 0;
+      float: right;
+      border: none;
+      background-color: transparent;
+      margin-right: 0;
+      margin-left: auto;
+  }
+
+  .readmore .arrow {
+    margin-left: 0.50rem;
   }
 
   .post-infos {
@@ -170,19 +211,10 @@
   }
 
   .image {
-    max-height: 800px;
-    max-width: 1100px;
-    width: auto;
+    width: 100% ;
+    max-height: auto;
+
   } 
-
-  .github {
-      color: #ff6a00;
-  }
-
-  .github:hover {
-      color: #ff6a00;
-      text-decoration: underline;
-  }
 
   h2 {
       margin: 0;
@@ -192,23 +224,25 @@
   p {
       margin: 0;
       margin-bottom: 5px;
+      font-size: 1.1em;
   }
 
-  .readmore {
-      display: flex;
-      color: black;
-      margin: 20px 0 0 0;
-      float: right;
-      border: none;
-      background-color: transparent;
-  }
+  
 
-  .readmore .arrow {
-    margin-left: 0.50rem;
-  }
+    .GitHub {
+        background-color: rgba(255, 255, 255, 0.2);
+        margin-left: 2%;
+        border-radius: 15px 15px 15px 15px;
+        min-width: 80px;
+        min-height: 10px;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+        padding: 2px;
+    }
 
-  button.readmore:hover {
-      color: #ff6a00;  
-      cursor: pointer;
-}
+    .GitHub:hover {
+        cursor: pointer;
+        border: 1px solid #ff6a00;
+        box-shadow: 0 0 10px #ff6a00;
+    }
 </style>

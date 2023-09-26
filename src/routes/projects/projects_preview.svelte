@@ -24,13 +24,13 @@
           {#if i % 2 === 0}
               <div class="row">
                   {#each Array(2) as _, j}
-                      <div class="post">
-                          <h2>{projects[i+j].title}</h2>
+                    <a class="post" href="{base}/projects" on:click={() => projects[i+j].visible=true}>
+                        <h2>{projects[i+j].title}</h2>
                           <p>{getsubString(projects[i+j].description, 60)}</p>
-                            <a class="readmore" href="{base}/projects" on:click={() => projects[i+j].visible=true}>
+                            <p class="readmore">
                                    Read More
-                            </a>
-                      </div>
+                            </p>
+                    </a>
                   {/each}
               </div>
             {/if}
@@ -64,6 +64,16 @@
       transition: all 0.3s;
       
   }
+
+  .post:hover {
+      cursor: pointer;
+      border: 1px solid #ff6a00;
+      box-shadow: 0 0 10px #ff6a00;
+  }
+
+  .post:hover .readmore {
+    color: #ff6a00;
+}
 
     h2 {
         margin: 0;

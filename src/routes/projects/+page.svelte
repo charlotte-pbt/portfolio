@@ -76,7 +76,7 @@
                             <h2 style="margin: 0;">{projectsData[i].title}</h2>
                             {#if projectsData[i].github}
                                 <a href={projectsData[i].github} class="GitHub" style="width: 5%;" >
-                                        <img src="https://i.imgur.com/DhT6us5.png" alt="GitHub" style="width: 100%; padding-top :5%"/>
+                                        <img src="https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/GitHub.png" alt="GitHub" style="width: 100%; padding-top :5%"/>
                                 </a>
                             {/if}
                         </div>
@@ -111,9 +111,7 @@
                         <div class="carousel">
                             <Carousel >
                                     {#each projectsData[i].images as image}
-                                        <div style="max-width: 1100px;">
                                             <img class="image" src={image.path} alt={image.alt} id={image.id}/>
-                                        </div>
                                     {/each}
                             </Carousel>
                         </div>
@@ -136,6 +134,7 @@
 
   .projects {
       margin: 0 auto;
+      margin-top: 60px; 
   }
 
   .row {
@@ -160,6 +159,7 @@
       text-align: left;
       vertical-align: top;
       position: relative;
+      color: black;
       
   }
 
@@ -204,10 +204,9 @@
 
   .carousel {
     padding-top: 35px;
-    padding-left: 40px;
-    padding-right: 40px;
     margin: 0 auto;
     height: auto;
+    max-width: 80%;
   }
 
   .image {
@@ -221,10 +220,21 @@
       margin-bottom: 10px;
   }
 
-  p {
+  .post-text p {
       margin: 0;
       margin-bottom: 5px;
-      font-size: 1.1em;
+      font-size: 120%;
+  }
+
+  .post-text h2{
+      margin: 0;
+      margin-bottom: 10px;
+      font-size: 150%;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 5px;
   }
 
   

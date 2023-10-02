@@ -24,12 +24,16 @@
           {#if i % 2 === 0}
               <div class="row">
                   {#each Array(2) as _, j}
-                    <a class="post" href="{base}/projects" on:click={() => projects[i+j].visible=true}>
-                        <h2>{projects[i+j].title}</h2>
+                  <a href="{base}/projects">
+                    <button class="post" on:click={() => projects[i+j].visible=true}>     
+                        <div class="post-text">
+                          <h2>{projects[i+j].title}</h2>
                           <p>{getsubString(projects[i+j].description, 60)}</p>
+                          </div>
                             <p class="readmore">
                                    Read More
                             </p>
+                        </button>
                     </a>
                   {/each}
               </div>
@@ -42,7 +46,9 @@
  <style>
     .container {
         max-width: 1400px;
-        height: 100%;  
+        height: 100%; 
+        margin-top: 60px; 
+        
     }
 
     .projects {
@@ -62,6 +68,18 @@
       padding: 10px;
       box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
       transition: all 0.3s;
+      text-align: left;
+      vertical-align: top;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      text-align: left;
+      vertical-align: top;
+      position: relative;
+      color: black;
+      width: 100%;
+      height: 100%;
       
   }
 
@@ -75,6 +93,22 @@
     color: #ff6a00;
 }
 
+.post-text {
+    flex-grow: 1;
+  }
+
+  .post-text p {
+      margin: 0;
+      margin-bottom: 5px;
+      font-size: 120%;
+  }
+
+  .post-text h2{
+      margin: 0;
+      margin-bottom: 10px;
+      font-size: 150%;
+  }
+
     h2 {
         margin: 0;
     }
@@ -84,11 +118,10 @@
         color: black;
         margin: 20px 0 0 0;
         float: right;
-        font-size: 0.9em;
+        border: none;
+        background-color: transparent;
+        margin-right: 0;
+        margin-left: auto;
     }
 
-    .readmore:hover {
-        color: #ff6a00;  
-        cursor: pointer;
-    }
 </style>

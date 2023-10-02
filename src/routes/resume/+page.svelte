@@ -1,3 +1,8 @@
+<!-- src/routes/resume.svelte -->
+<svelte:head>
+   <title>Resume</title>
+</svelte:head>
+
 <script>
     let url = "https://files.tanguymaraux.com/api/public/dl/JdCfQ3hF?inline=true"
 </script>

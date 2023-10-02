@@ -41,6 +41,8 @@
             {/each}
         {/if}
     {/each}
+    <link rel="preload" href="https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/GitHub.png" as="image">
+    
 </head>
 
 
@@ -75,7 +77,7 @@
                         <div style="display: flex; align-items: center;">
                             <h2 style="margin: 0;">{projectsData[i].title}</h2>
                             {#if projectsData[i].github}
-                                <a href={projectsData[i].github} class="GitHub" style="width: 5%;" >
+                                <a href={projectsData[i].github} class="GitHub" style="width: 5%;" target="_blank">
                                         <img src="https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/GitHub.png" alt="GitHub" style="width: 100%; padding-top :5%"/>
                                 </a>
                             {/if}

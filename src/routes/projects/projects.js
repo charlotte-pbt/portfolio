@@ -15,22 +15,22 @@ export let projects = [
         visible: false,
         images: [
             {
-                path: "https://i.imgur.com/8jtD9VD.png",
+                path: "https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/catmull-clark1.png",
                 alt: "Catmull-Clark 0 subdivision",
                 id: "catmullclark1",
             },
             {
-                path: "https://i.imgur.com/0VOPMDj.png",
+                path: "https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/catmull-clark4.png",
                 alt: "Catmull-Clark 2 subdivision",
                 id: "catmullclark4",
             },
             {
-                path: "https://i.imgur.com/piaU5Td.png",
+                path: "https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/catmull-clark3.png",
                 alt: "Catmull-Clark 4 subdivision",
                 id: "catmullclark3",
             },
             {
-                path: "https://i.imgur.com/3TXRJSf.png",
+                path: "https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/catmull-clark2.png",
                 alt: "Catmull-Clark sword 1 subdivision",
                 id: "catmullclark2",
             }
@@ -53,7 +53,7 @@ export let projects = [
         visible: false,
         images: [
             {
-                path: "https://i.imgur.com/khi9TCt.png",
+                path: "https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/mytinytown.png",
                 alt: "My Tiny Town",
                 id: "myTinyTown",
             }
@@ -77,12 +77,12 @@ export let projects = [
         visible: false,
         images: [
             {
-                path: "https://i.imgur.com/totnVZM.png",
+                path: "https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/ball_game1.png",
                 alt: "Ball Game 1",
                 id: "ball_game1",
             },
             {
-                path: "https://i.imgur.com/2dclygt.png",
+                path: "https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/ball_game2.png",
                 alt: "Ball Game 2",
                 id: "ball_game2",
             }

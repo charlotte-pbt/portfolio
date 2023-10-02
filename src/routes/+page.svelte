@@ -10,7 +10,7 @@
 <div class="container">
           <div class="info-text">
               <h1>
-                <p class="animate-text-1">Computer engineering student,</p>
+                <p>Computer engineering student,</p>
               </h1>
               <h11>
                 <p class="text-2">EPITA, IMAGE major, specialized in images synthesis</p>
@@ -57,6 +57,21 @@
       width: fit-content;
       font-weight: 800;
       letter-spacing: -0.03em;
+      font-size: auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    /* Réduire la taille du texte pour les écrans plus petits (par exemple, les téléphones) */
+    h1 {
+        font-size: 3.5em;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+      /* Réduire davantage la taille du texte pour les écrans plus petits */
+      h1 {
+          font-size: 3em;
+      }
   }
 
   h11 {

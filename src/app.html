@@ -12,6 +12,11 @@
 </html>
 
 <style>
+	html {
+    min-height:100%;/* make sure it is at least as tall as the viewport */
+    position:relative;
+	}
+
 	body {
 	background-position: left top;
 	font-family: "Inter", sans-serif;
@@ -20,8 +25,7 @@
 	background-repeat: no-repeat;
 
 	background: linear-gradient(130deg,rgb(255, 247, 104),rgb(245,116,245));
-	min-height: 100vh;
-	height: auto;
+	height: 100%;
 	}
  
 	* {

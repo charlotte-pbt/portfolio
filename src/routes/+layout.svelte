@@ -9,6 +9,7 @@
         <div class="nav-links">
             <a href="{base}/about" class="link">About</a>
             <a href="{base}/projects" class="link">Projects</a>
+            <a href="{base}/resume" class="link">Resume</a>
         </div>
     </div>
  </nav>

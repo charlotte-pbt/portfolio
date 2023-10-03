@@ -13,7 +13,7 @@
 
 <style>
 	html {
-    min-height:100%;/* make sure it is at least as tall as the viewport */
+    min-height:100%;
     position:relative;
 	}
 
@@ -55,21 +55,29 @@
 		background: linear-gradient(160deg, rgb(255, 243, 150), rgba(240, 119, 212, 0.55));
 		background-color: white;
 		z-index: 1000; /* Pour s'assurer qu'il est au-dessus des autres éléments */
+		
+       	align-items: center;
 	}
  
 	nav .nav-container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		
+		margin: 0 70px 0 70px;
+	}
 
-		margin: 0 80px 0 80px;
+	@media screen and (max-width: 768px) {
+		nav .nav-container {
+			margin: 0 30px 0 30px;
+		}
 	}
  
 	.nav-links {
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
-		margin: -1em 0;
+		margin: -1em;
 		flex: 1 0 auto;
 	}
  

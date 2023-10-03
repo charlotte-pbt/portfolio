@@ -134,6 +134,12 @@
      
   }
 
+  @media screen and (max-width: 768px) {
+		.container {
+			margin: 0 30px 0 30px;
+		}
+	}
+
   .projects {
       margin: 0 auto;
       margin-top: 60px; 
@@ -143,7 +149,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 5%;
-      margin: 5% auto;
+      margin-top: 5%;
   }
 
   .post {
@@ -199,6 +205,10 @@
     margin-left: 0.50rem;
   }
 
+  .infos {
+    margin-top: 30px
+  }
+
   .post-infos {
       padding-left: 10px;
       padding-right: 10px;
@@ -210,6 +220,12 @@
     height: auto;
     max-width: 80%;
   }
+
+  @media screen and (max-width: 768px) {
+		.carousel {
+			max-width: 110%;
+		}
+	}
 
   .image {
     width: 100% ;

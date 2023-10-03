@@ -40,8 +40,14 @@
 
   .container {
       max-width: 1400px;
-      margin: 190px 65px 0 65px;
+      margin: 190px 70px 0 70px;
   }
+
+  @media screen and (max-width: 768px) {
+		.container {
+			margin: 190px 30px 0 30px;
+		}
+	}
 
   h1 {
       font-size: 4rem;

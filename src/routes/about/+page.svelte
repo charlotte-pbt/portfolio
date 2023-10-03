@@ -3,6 +3,29 @@
    <title>About</title>
 </svelte:head>
 
+<script>
+    import { onMount } from "svelte";
+    import { onDestroy } from "svelte";
+
+    let screenWidth = 769;
+
+    if (typeof window !== 'undefined') {
+
+        screenWidth = window.innerWidth;
+
+    function updateScreenHeight() {
+        screenWidth = window.innerWidth;
+    }
+
+    window.addEventListener('resize', updateScreenHeight);
+
+    // N'oubliez pas de retirer l'écouteur d'événements lorsque le composant est démonté
+    onDestroy(() => {
+      window.removeEventListener('resize', updateScreenHeight);
+    });
+}
+</script>
+
 <head>
     <!--Preload of images to prevent blinking-->
     <link rel="preload" href="https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/ING3.JPG" as="image">
@@ -10,36 +33,56 @@
     <link rel="preload" href="https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/GitHub_logo.png" as="image">
 </head>
 
-<div class="main_container" >
-       <div class="text">
-         <h1 class="about-title">I'm Charlotte Philibert 👋</h1>
-         <div class="about-subtitle">
-             <p>
-                I am currently a 5th year student in computer engineering at EPITA, IMAGE major, specialized in image synthesis. 
-                I have a particular interest in video games, animated films and serious games.
-             </p>
-             <p>
-                I am actively looking for a 6-month end-of-studies internship in the field of image synthesis, 
-                starting in February 2024. I am open to all kinds of opportunities.
-             </p>
-             <p>
-               You can send me an email at <span class="info-text">charlotte56.philibert@gmail.com</span>
-             </p>
-         </div>
-       </div>
-    
-       <div class="image-container">
-       <img class="photo" src="https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/ING3.JPG" alt="Charlotte Philibert">
-       </div>
-</div>
-<div class="main_container">
-    <a href="https://www.linkedin.com/in/charlotte-philibert/" target="_blank">
-        <img class="logo" src="https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/linkedin.png" alt="LinkedIn">
-    </a>
-    <a href="https://github.com/charlotte-pbt" target="_blank">
-        <img class="logo" src="https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/GitHub_logo.png" alt="GitHub">
-    </a>
-</div>
+<div class="container">
+    <div class="main_container" >
+        <div class="text">
+            <h1 class="about-title">
+                <p>I'm Charlotte Philibert 👋</p>
+            </h1>
+            <div class="about-subtitle">
+                <p>
+                    I am currently a 5th year student in computer engineering at EPITA, IMAGE major, specialized in image synthesis. 
+                    I am actively looking for a 6-month end-of-studies internship in the field of image synthesis, 
+                    starting in February 2024. 
+                </p>
+                <p>
+                    I have a particular interest in video games, animated films and serious games. 
+                    I have already completed a 5-month internship in this field at the Polymorph studio as a 3D developer. 
+                    I was able to take part in the development of real-time applications on Unreal Engine, such as AI for a VR serious game.
+                </p>
+                <p>
+                    I am open to all kinds of opportunities.
+                </p>
+                <p>
+                You can send me an email at <span class="info-text">charlotte56.philibert@gmail.com</span>
+                </p>
+            </div>
+        </div>
+        
+        {#if screenWidth > 768}
+                <div class="image-container">
+                <img class="photo" src="https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/ING3.JPG" alt="Charlotte Philibert">
+                </div>
+        {/if}
+    </div>
+
+    <div class="main_container2">
+        <a href="https://www.linkedin.com/in/charlotte-philibert/" target="_blank">
+            <img class="logo" src="https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/charlotte-pbt" target="_blank">
+            <img class="logo" src="https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/GitHub_logo.png" alt="GitHub">
+        </a>
+    </div>
+
+    {#if screenWidth <= 768}
+        <div class="main_container3" >
+                <div class="image-container">
+                <img class="photo" src="https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/ING3.JPG" alt="Charlotte Philibert">
+                </div>
+        </div>
+    {/if}  
+</div> 
 
 <style>
 
@@ -47,6 +90,29 @@
           font-size: 4rem;
           margin: 0 0 0.5em 0;
    }
+   
+   h1 p {
+      position: relative;
+      font: inherit;
+      margin: 0;
+      text-align: left;
+      line-height: 130%;
+      width: fit-content;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      font-size: auto;
+  }
+
+    @media screen and (min-width: 768px) {
+        .image-container {
+            margin-left: 20px;
+        }
+
+        .container {
+            margin: 120px 70px 0 70px;
+            max-width: 1400px;
+        }
+    }
 
    @media screen and (max-width: 768px) {
     /* Réduire la taille du texte pour les écrans plus petits (par exemple, les téléphones) */
@@ -54,20 +120,16 @@
         font-size: 3.5em;
     }
 
-    .main_container {
-        flex-direction: column; /* Afficher les éléments en colonne */
-        align-items: flex-start; /* Aligner le contenu à gauche */
-    }
+    
+   .container {
+       margin: 120px 30px 0 30px;
+   }
 
     .image-container {
         /* Styles pour l'image au-dessus du texte */
         margin-top: 20px; /* Espacement entre l'image et le texte */
+        margin-left: 0px;
     }
-
-    .text{
-        max-width: 800px;
-    }
-
    }
 
    @media screen and (max-width: 480px) {
@@ -76,37 +138,34 @@
           font-size: 3em;
       }
 
-      .main_container {
-        flex-direction: column; /* Afficher les éléments en colonne */
-        align-items: flex-start; /* Aligner le contenu à gauche */
-    }
-
-    .image-container {
-        /* Styles pour l'image au-dessus du texte */
-        margin-top: 20px; /* Espacement entre l'image et le texte */
-    }
-
-    .text{
-        max-width: 800px;
-    }
+      .container {
+       margin: 190px 30px 0 30px;
+   }
    }
 
    .main_container {
-       margin: 0 60px 0 80px;
-       max-width: 1400px;
        display: flex;
        align-items: center;
+   }
+
+   .main_container3 {
+        display: flex;
+        justify-content: center; /* Centre horizontalement */
+        align-items: center; /* Centre verticalement */
+        margin: 0 auto;
+        margin-top: 10px;
+        flex-direction: column;
+   }
+
+   .main_container2 {
+       display: flex;
+       align-items: left;
 
    }
 
    .about-title {
-       font-size: 4.2rem;
        font-weight: bold;
-       margin-top: 10rem;
-   }
-
-   .about-subtitle {
-       margin-top: -2rem;
+       
    }
 
    .about-subtitle >p {
@@ -122,11 +181,7 @@
 
    .text {
     flex: 1;
-    max-width: 800px;
-}
-
-   .image-container {
-    margin-left: 20px; 
+    max-width: 950px;
 }
 
    .photo {
@@ -142,7 +197,6 @@
          width: 50px;
          height: 50px;
          margin-right: 20px;
-         margin-top: 10px;
          transition: opacity 0.3s ease;
    }
 

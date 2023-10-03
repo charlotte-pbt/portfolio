@@ -54,7 +54,7 @@
                 </p>
                 <p>
                     I have a particular interest in video games, animated films and serious games. 
-                    I have already completed a 5-month internship in this field at <a href="https://www.polymorph.fr/home/" target="_blank" style="font-style: italic;">Polymorph studio</a> as a 3D developer. 
+                    I have already completed a 5-month internship in this field at <a href="https://www.polymorph.fr/home/" target="_blank" style="font-style: italic;">Polymorph</a> studio as a 3D developer. 
                     I was able to take part in the development of real-time applications on Unreal Engine, such as AI for a VR serious game.
                 </p>
                 <p>

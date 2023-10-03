@@ -39,7 +39,6 @@
   
 
   .container {
-      max-width: 1400px;
       margin: 190px 70px 0 70px;
   }
 
@@ -102,7 +101,7 @@
   }
 
   h2 {
-      max-width: 65ch;
+      
       font-weight: 200;
       margin-top: 0.50rem;
   }

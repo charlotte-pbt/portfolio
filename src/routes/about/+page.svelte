@@ -34,6 +34,13 @@
 </head>
 
 <div class="container">
+    {#if screenWidth <= 768}
+        <div class="main_container3" >
+                <div class="image-container">
+                <img class="photo" src="https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/ING3.JPG" alt="Charlotte Philibert">
+                </div>
+        </div>
+    {/if}  
     <div class="main_container" >
         <div class="text">
             <h1 class="about-title">
@@ -47,7 +54,7 @@
                 </p>
                 <p>
                     I have a particular interest in video games, animated films and serious games. 
-                    I have already completed a 5-month internship in this field at the Polymorph studio as a 3D developer. 
+                    I have already completed a 5-month internship in this field at <a href="https://www.polymorph.fr/home/" target="_blank" style="font-style: italic;">Polymorph studio</a> as a 3D developer. 
                     I was able to take part in the development of real-time applications on Unreal Engine, such as AI for a VR serious game.
                 </p>
                 <p>
@@ -75,13 +82,6 @@
         </a>
     </div>
 
-    {#if screenWidth <= 768}
-        <div class="main_container3" >
-                <div class="image-container">
-                <img class="photo" src="https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/ING3.JPG" alt="Charlotte Philibert">
-                </div>
-        </div>
-    {/if}  
 </div> 
 
 <style>
@@ -105,12 +105,19 @@
 
     @media screen and (min-width: 768px) {
         .image-container {
-            margin-left: 20px;
+            margin-left: 30px;
+            margin-right: 30px;
         }
 
         .container {
-            margin: 120px 70px 0 70px;
-            max-width: 1400px;
+            margin: 190px 70px 0 70px;
+        }
+
+        .photo {
+            border-radius: 50%;
+            object-fit: cover;
+            width: 250px;
+            height: 250px;
         }
     }
 
@@ -127,9 +134,16 @@
 
     .image-container {
         /* Styles pour l'image au-dessus du texte */
-        margin-top: 20px; /* Espacement entre l'image et le texte */
+        margin-bottom: 20px; /* Espacement entre l'image et le texte */
         margin-left: 0px;
     }
+
+    .photo {
+            border-radius: 50%;
+            object-fit: cover;
+            width: 150px;
+            height: 150px;
+        }
    }
 
    @media screen and (max-width: 480px) {
@@ -137,10 +151,6 @@
       h1 {
           font-size: 3em;
       }
-
-      .container {
-       margin: 190px 30px 0 30px;
-   }
    }
 
    .main_container {
@@ -181,17 +191,8 @@
 
    .text {
     flex: 1;
-    max-width: 950px;
 }
 
-   .photo {
-       border-radius: 50%;
-       min-width: 250px; /* Largeur maximale souhaitée */
-       min-height: 250px; /* Hauteur maximale souhaitée */
-       object-fit: cover;
-       width: 250px;
-       height: 250px;
-   }
    
    .logo {
          width: 50px;

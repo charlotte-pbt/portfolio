@@ -45,7 +45,6 @@
 
  <style>
     .container {
-        max-width: 1400px;
         height: 100%; 
         margin-top: 60px; 
         

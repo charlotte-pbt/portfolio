@@ -70,56 +70,55 @@
                   {/each}
               </div>
           {/if}
-          {#if projectsData[i].visible}
-                <div class="infos">
-                    <div class="post-infos">
-                        
-                        <div style="display: flex; align-items: center;">
-                            <h2 style="margin: 0;">{projectsData[i].title}</h2>
-                            {#if projectsData[i].github}
-                                <a href={projectsData[i].github} class="GitHub" style="width: 5%;" target="_blank">
-                                        <img src="https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/GitHub.png" alt="GitHub" style="width: 100%; padding-top :5%"/>
-                                </a>
-                            {/if}
-                        </div>
-                        
-
-                        <p style="padding-top: 30px;">{@html projectsData[i].infos.replace(/\n/g, '<br>')}</p> 
-                        <br>
-                        {#if projectsData[i].people}
-                            <p>Number of people involved : {projectsData[i].people}</p>
-                        {/if}
-                        {#if projectsData[i].context}
-                            <p>Context : {projectsData[i].context}</p>
-                        {/if}
-                        {#if projectsData[i].crossplatform}
-                            <p>Crossplatform : {projectsData[i].crossplatform}</p>
-                        {/if}
-                        {#if projectsData[i].platforms}
-                            <p>Platform : {projectsData[i].platforms}</p>
-                        {/if}
-                        {#if projectsData[i].levels}
-                            <p>Levels number : {projectsData[i].levels}</p>
-                        {/if}
-                        {#if projectsData[i].languages}
-                            <p>Languages : {projectsData[i].languages}</p>
-                        {/if}
-                        {#if projectsData[i].dependencies}
-                            <p>Dependencies : {projectsData[i].dependencies}</p>
+            <!--Si projectsData[i].visible alors class="infos .expended" sinon class="infos"-->
+            <div class="infos {projectsData[i].visible ? 'expanded' : ''}">
+                <div class="post-infos">
+                    
+                    <div style="display: flex; align-items: center;">
+                        <h2 style="margin: 0;">{projectsData[i].title}</h2>
+                        {#if projectsData[i].github}
+                            <a href={projectsData[i].github} class="GitHub" style="width: 5%;" target="_blank">
+                                    <img src="https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/GitHub.png" alt="GitHub" style="width: 100%; padding-top :5%"/>
+                            </a>
                         {/if}
                     </div>
+                    
 
-                    {#if projectsData[i].images}
-                        <div class="carousel">
-                            <Carousel >
-                                    {#each projectsData[i].images as image}
-                                            <img class="image" src={image.path} alt={image.alt} id={image.id}/>
-                                    {/each}
-                            </Carousel>
-                        </div>
+                    <p style="padding-top: 30px;">{@html projectsData[i].infos.replace(/\n/g, '<br>')}</p> 
+                    <br>
+                    {#if projectsData[i].people}
+                        <p>Number of people involved : {projectsData[i].people}</p>
+                    {/if}
+                    {#if projectsData[i].context}
+                        <p>Context : {projectsData[i].context}</p>
+                    {/if}
+                    {#if projectsData[i].crossplatform}
+                        <p>Crossplatform : {projectsData[i].crossplatform}</p>
+                    {/if}
+                    {#if projectsData[i].platforms}
+                        <p>Platform : {projectsData[i].platforms}</p>
+                    {/if}
+                    {#if projectsData[i].levels}
+                        <p>Levels number : {projectsData[i].levels}</p>
+                    {/if}
+                    {#if projectsData[i].languages}
+                        <p>Languages : {projectsData[i].languages}</p>
+                    {/if}
+                    {#if projectsData[i].dependencies}
+                        <p>Dependencies : {projectsData[i].dependencies}</p>
                     {/if}
                 </div>
-              {/if}
+
+                {#if projectsData[i].images}
+                    <div class="carousel">
+                        <Carousel >
+                                {#each projectsData[i].images as image}
+                                        <img class="image" src={image.path} alt={image.alt} id={image.id}/>
+                                {/each}
+                        </Carousel>
+                    </div>
+                {/if}
+            </div>
       {/each}
 
   </div>
@@ -128,7 +127,6 @@
 
 <style>
   .container {
-      max-width: 1400px;
       margin: 0 65px 0 65px;
       height: 100%;  
      
@@ -206,7 +204,12 @@
   }
 
   .infos {
-    margin-top: 30px
+    margin-top: 30px;
+    display: none;
+  }
+
+  .infos.expanded {
+    display: block;
   }
 
   .post-infos {

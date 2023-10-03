@@ -5,7 +5,7 @@
 
 <script>
     import { onMount } from "svelte";
-    let url = "https://files.tanguymaraux.com/api/public/dl/JdCfQ3hF?inline=true"
+    let url = "https://files.tanguymaraux.com/api/public/dl/PtB4__r7?inline=true"
 
     onMount(() => {
         // Obtenez la hauteur de la nav-container
@@ -23,10 +23,6 @@
         }
     });
 </script>
-
-<head>
-    <link rel="preload" href={url}>
-</head>
 
 <div class="all">
 

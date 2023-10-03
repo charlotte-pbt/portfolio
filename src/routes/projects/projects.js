@@ -99,8 +99,30 @@ export let projects = [
         people: "4",
         context: "School project",
         description: "Multiplayer hide-and-seek video game on Unity",
-        infos: "need",
+        infos: "Multiplayer hide-and-seek video game with 2 maps made on Unity and Photon.",
         languages: ["C#", " Unity"],
         visible: false,
+        images: [
+            {
+                path: "https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/jeu1.png",
+                alt: "Hide and seek game 1",
+                id: "Hide_and_seek_game1",
+            },
+            {
+                path: "https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/jeu2.png",
+                alt: "Hide and seek game 2",
+                id: "Hide_and_seek_game2",
+            },
+            {
+                path: "https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/jeu3.png",
+                alt: "Hide and seek game 3",
+                id: "Hide_and_seek_game3",
+            },
+            {
+                path: "https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/jeu4.png",
+                alt: "Hide and seek game 4",
+                id: "Hide_and_seek_game4",
+            }
+        ],
     },
 ]

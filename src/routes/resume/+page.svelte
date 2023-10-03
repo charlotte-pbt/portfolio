@@ -27,11 +27,10 @@
 <div class="all">
 
     <iframe
+        class="responsive-iframe"
         title="CV_Charlotte_Philibert"
         src={url}
         frameborder="0"
-        width="100%"
-        height="100%"
     ></iframe>
 
 </div>
@@ -39,15 +38,22 @@
 <style>
 
 .all {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     margin: 0 70px 0 70px;
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0; 
 }
 
 @media screen and (max-width: 768px) {
 		.all {
+            position: relative;
 			margin: 0 30px 0 30px;
 		}
 	}

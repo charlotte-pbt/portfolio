@@ -3,6 +3,10 @@
     import { base } from '$app/paths';
 </script>
 
+<svelte:head>
+  <link rel="icon" type="image/svg" href="https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/icon.png" />
+</svelte:head>
+
 <nav class="header">
     <div class="nav-container">
         <a href="{base}/" class="nav-logo" title="Back to Homepage">Charlotte Philibert</a>
@@ -21,7 +25,7 @@
  
  <style>
      .container {
-        max-width: 1400px;
+        
         margin: 50px 0;
         background-size: cover;
     }

@@ -7,13 +7,13 @@
 		
 		<link href="./_app/immutable/assets/0.bb4cc407.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/4.b1eaf773.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.d3250920.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.a4b79abe.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.7dece5bf.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.51a8e499.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/paths.bea43acc.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.d87d3530.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.01df59ab.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/paths.58f88ce3.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.c5e84bf3.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index.746a4b0e.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/0.4afdd078.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.e337649b.js">
 		<link rel="modulepreload" href="./_app/immutable/nodes/4.8ab3ad84.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/projects.0762c3c2.js"><title>Projects</title><!-- HEAD_svelte-1m0sz5j_START --><!-- HEAD_svelte-1m0sz5j_END -->
 	</head>
@@ -22,7 +22,7 @@
 			
 			<script>
 				{
-					__sveltekit_10s8tp6 = {
+					__sveltekit_vwkt9z = {
 						assets: "/portfolio",
 						base: new URL(".", location).pathname.slice(0, -1),
 						env: {}
@@ -33,8 +33,8 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("./_app/immutable/entry/start.d3250920.js"),
-						import("./_app/immutable/entry/app.d87d3530.js")
+						import("./_app/immutable/entry/start.a4b79abe.js"),
+						import("./_app/immutable/entry/app.c5e84bf3.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 4],
@@ -103,6 +103,12 @@
 		align-items: center;
 
 		margin: 0 70px 0 70px;
+	}
+
+	@media screen and (max-width: 768px) {
+		nav .nav-container {
+			margin: 0 30px 0 30px;
+		}
 	}
  
 	.nav-links {

@@ -4,7 +4,7 @@ export let projects = [
 
     {
         title: "Catmull–Clark subdivision surface",
-        year: "3rd year at Epita",
+        year: "4th year at Epita",
         people: "2",
         context: "School project",
         description: "Recursive implementation of Catmull–Clark subdivision surface for image synthesis project.",
@@ -42,7 +42,7 @@ export let projects = [
 
     {
         title: "My Tiny Town",
-        year: "3rd year at Epita",
+        year: "4th year at Epita",
         people: "2",
         context: "School project",
         description: "Design software for building your own city.",

@@ -24,17 +24,19 @@
           {#if i % 2 === 0}
               <div class="row">
                   {#each Array(2) as _, j}
-                  <a href="{base}/projects">
-                    <button class="post" on:click={() => projects[i+j].visible=true}>     
-                        <div class="post-text">
-                          <h2>{projects[i+j].title}</h2>
-                          <p>{getsubString(projects[i+j].description, 60)}</p>
-                          </div>
-                            <p class="readmore">
-                                   Read More
-                            </p>
-                        </button>
-                    </a>
+                    {#if projects[i+j]}
+                        <a href="{base}/projects">
+                            <button class="post" on:click={() => projects[i+j].visible=true}>     
+                                <div class="post-text">
+                                <h2>{projects[i+j].title}</h2>
+                                <p>{getsubString(projects[i+j].description, 60)}</p>
+                                </div>
+                                    <p class="readmore">
+                                        Read More
+                                    </p>
+                            </button>
+                        </a>
+                    {/if}
                   {/each}
               </div>
             {/if}

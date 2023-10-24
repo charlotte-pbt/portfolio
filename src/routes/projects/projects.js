@@ -1,5 +1,38 @@
 export let projects = [
 
+    /* 3D Animation */
+
+    {
+        title: "3D Animation",
+        year: "5th year at Epita",
+        people: "2",
+        context: "School project",
+        description: "Cloth and wind simulation with a fan.",
+        infos: "Cloth and wind simulation : \n\nSeveral cloths are hung on clotheslines, and the wind comes from a fan that can be adjusted in terms of power and position.",
+        languages: ["C++", " OpenGL"],
+        crossplatform : ["Windows", " MacOS", " Linux"],
+        dependencies: ["Glad", " GLFW", " ImGui"],
+        visible: false,
+        images: [
+            {
+                path: "https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/anim3d1.png",
+                alt: "Animation 3D",
+                id: "anim3d1",
+            },
+            {
+                path: "https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/anim3d2.png",
+                alt: "Animation 3D",
+                id: "anim3d2",
+            },
+            {
+                path: "https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/anim3d3.png",
+                alt: "Animation 3D",
+                id: "anim3d3",
+            }
+        ],
+        github: "https://github.com/charlotte-pbt/ANI3D",
+    },
+
     /* Catmull–Clark subdivision surface */
 
     {

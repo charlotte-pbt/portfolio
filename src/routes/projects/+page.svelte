@@ -53,6 +53,7 @@
           {#if i % 2 === 0}
               <div class="row">
                   {#each Array(2) as _, j}
+                    {#if projectsData[i+j]}
                       <button class="post {projectsData[i+j].visible ? 'expanded' : ''}" on:click={() => toggleExpand(projectsData[i+j])}>
                         <div class="post-text">
                           <h2 >{projectsData[i+j].title}</h2>
@@ -67,6 +68,7 @@
                             {/if}
                         </p>
                       </button>
+                    {/if}
                   {/each}
               </div>
           {/if}

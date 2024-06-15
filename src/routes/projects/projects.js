@@ -1,5 +1,36 @@
 export let projects = [
 
+    /* RVAU UnderCooked */
+
+    {
+        title: "UnderCooked",
+        year: "5th year at Epita",
+        people: "5",
+        context: "School project",
+        description: "Multiplayer VR cooking game",
+        infos: "UnderCooked is a duo cooking game in VR made on Unity and Photon. \nThe goal is to cook as many dishes as possible in a limited time. You have to communicate with your partner to succeed. \n\n The game is played with a VR headset and two controllers.",
+        languages: ["C#", " Unity"],
+        crossplatform : ["Oculus Quest"],
+        visible: false,
+        images: [
+            {
+                path: "https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/rvau1.png",
+                alt: "UnderCooked Main Menu",
+                id: "undercooked1",
+            },
+            {
+                path: "https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/rvau2.png",
+                alt: "UnderCooked Kitchen",
+                id: "undercooked2",
+            },
+            {
+                path: "https://raw.githubusercontent.com/charlotte-pbt/portfolio/master/src/images/rvau3.png",
+                alt: "UnderCooked Oven",
+                id: "undercooked3",
+            }
+        ],
+    },
+
     /* 3D Animation */
 
     {

@@ -16,11 +16,13 @@
         return str;
     };
 
+    let numPreview = 4;
+
 </script>
 
 <div class="container">
     <div class="projects">
-        {#each Array(projects.length) as _, i}
+        {#each Array(numPreview) as _, i}
           {#if i % 2 === 0}
               <div class="row">
                   {#each Array(2) as _, j}
@@ -41,6 +43,7 @@
               </div>
             {/if}
         {/each}
+        <a class="moreInfos" href="{base}/projects">Show more...</a>
     </div>
  </div>
  
@@ -54,6 +57,7 @@
 
     .projects {
       margin: 0 auto;
+      text-align: center;
   }
 
   .row {
@@ -91,6 +95,10 @@
   }
 
   .post:hover .readmore {
+    color: #ff6a00;
+}
+
+  .moreInfos:hover {
     color: #ff6a00;
 }
 

@@ -223,7 +223,7 @@
     padding-top: 35px;
     margin: 0 auto;
     height: auto;
-    max-width: 80%;
+    max-width: 70%;
   }
 
   @media screen and (max-width: 768px) {
@@ -233,9 +233,8 @@
 	}
 
   .image {
-    width: 100% ;
-    max-height: auto;
-
+    width: auto;
+    height: auto;
   } 
 
   h2 {

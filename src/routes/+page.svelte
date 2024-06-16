@@ -18,7 +18,7 @@
           </div>
 
           <h2 class="subtitle">
-            I am actively looking for a 6-month end-of-studies internship in the field of image synthesis, starting in February 2024.
+            I am actively looking for a full-time position in the field of Virtual Reality or Augmented Reality, starting in October 2024.
           </h2>
 
           <div role="link" style="color:black" class="scroll-button animate-scroll" tabindex="0">
@@ -31,7 +31,7 @@
 
           <Projects_preview/>
          
- </div>
+ </div> 
 
 
 

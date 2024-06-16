@@ -48,14 +48,15 @@
             </h1>
             <div class="about-subtitle">
                 <p>
-                    I am currently a 5th year student in computer engineering at EPITA, IMAGE major, specialized in image synthesis. 
-                    I am actively looking for a 6-month end-of-studies internship in the field of image synthesis, 
-                    starting in February 2024. 
+                    I am a 5th year student in computer engineering at EPITA, majoring in IMAGE, and specialized in image synthesis. 
+                    I am currently doing an end-of-studies internship at KNDS France. 
+                    I am actively looking for a full-time position in the field of simulation, starting in October 2024. 
                 </p>
                 <p>
-                    I have a particular interest in video games, animated films and serious games. 
-                    I have already completed a 5-month internship in this field at <a href="https://www.polymorph.fr/home/" target="_blank" style="font-style: italic;">Polymorph</a> studio as a UE developer. 
-                    I was able to take part in the development of real-time applications on Unreal Engine, such as AI for a VR serious game.
+                    I have a particular interest in serious games and video games. 
+                    I already have two professional experiences with extended reality. 
+                    My current internship at KNDS France involves augmented reality simulation of transparent armor from inside armored vehicles using Unreal Engine 5. 
+                    Previously, I completed an internship at <a href="https://www.polymorph.fr/home/" target="_blank" style="font-style: italic;">Polymorph</a> studio, where I developed AI for virtual reality simulation, also using Unreal Engine. 
                 </p>
                 <p>
                     I am open to all kinds of opportunities.

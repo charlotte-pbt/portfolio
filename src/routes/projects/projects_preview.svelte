@@ -43,7 +43,7 @@
               </div>
             {/if}
         {/each}
-        <a class="moreInfos" href="{base}/projects">Show more...</a>
+        <a class="moreInfos" href="{base}/projects"> <showAll class="showAll"> Show all projects</showAll> <arrow class=arrow>↓</arrow></a>
     </div>
  </div>
  
@@ -58,6 +58,10 @@
     .projects {
       margin: 0 auto;
       text-align: center;
+  }
+
+  .arrow {
+    margin-left: 0.30rem;
   }
 
   .row {
@@ -100,6 +104,10 @@
 
   .moreInfos:hover {
     color: #ff6a00;
+}
+
+.showAll {
+    text-decoration: underline;
 }
 
 .post-text {

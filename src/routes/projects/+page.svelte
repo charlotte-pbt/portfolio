@@ -233,8 +233,7 @@
 	}
 
   .image {
-    width: auto;
-    height: auto;
+    height: 100%;
   } 
 
   h2 {

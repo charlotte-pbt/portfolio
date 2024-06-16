@@ -4,7 +4,7 @@
 </svelte:head>
 
 <script>
-    let url = "https://files.tanguymaraux.com/api/public/dl/PtB4__r7?inline=true"
+    let url = "https://files.tanguymaraux.com/api/public/dl/G3W9DEkA?inline=true"
 </script>
 
 <div class="all">
